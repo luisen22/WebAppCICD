@@ -14,7 +14,7 @@ namespace WebApplicationCICD.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "Hola mundo", "Mi primer CICD" };
         }
 
         // GET api/values/5
