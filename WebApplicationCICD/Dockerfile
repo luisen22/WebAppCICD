@@ -2,7 +2,7 @@ FROM microsoft/dotnet:2.1-sdk AS build
 #WORKDIR /app
 WORKDIR /code
 
-#COPY *.csproj ./
+COPY *.csproj ./
 COPY ..
 RUN dotnet restore
 
