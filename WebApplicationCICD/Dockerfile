@@ -8,7 +8,7 @@ RUN dotnet restore
 #COPY . ./
 COPY . .
 #RUN dotnet publish -c Release -o out
-RUN dotnet publisj --output /output --configuration Release
+RUN dotnet publish --output /output --configuration Release
 
 FROM microsoft/dotnet:2.1-aspnetcore-runtime AS runtime
 #WORKDIR /app
