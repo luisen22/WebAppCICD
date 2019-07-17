@@ -7,8 +7,8 @@ COPY *.csproj ./
 RUN dotnet restore
 
 COPY . ./
-#RUN dotnet publish -c Release -o out
-RUN dotnet publish --output /output --configuration Release
+RUN dotnet publish -c Release -o out
+#RUN dotnet publish --output /output --configuration Release
 
 FROM microsoft/dotnet:2.1-aspnetcore-runtime As Runtime
 #WORKDIR /app
