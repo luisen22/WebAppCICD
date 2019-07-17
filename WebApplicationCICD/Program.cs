@@ -1,4 +1,4 @@
-﻿using System;
+:﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -19,6 +19,6 @@ namespace WebApplicationCICD
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-    }
+                .UseStartup<Startup>(); //Comment 19:01
+ jul     }
 }
