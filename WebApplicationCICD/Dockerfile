@@ -1,5 +1,5 @@
 FROM microsoft/dotnet:2.1-sdk AS build
-#WORKDIR /app
+#WORKDIR /app first commit wednesday 31th July
 WORKDIR /code
 
 COPY *.csproj ./
