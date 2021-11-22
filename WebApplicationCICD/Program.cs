@@ -19,6 +19,6 @@ namespace WebApplicationCICD
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>(); //Comment 19:01
- jul     }
+                .UseStartup<Startup>();
+    }
 }
