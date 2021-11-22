@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
 #WORKDIR /app first commit wednesday 31th July
 WORKDIR /code
 
@@ -10,7 +10,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 #RUN dotnet publish --output /output --configuration Release
 
-FROM microsoft/dotnet:2.1-aspnetcore-runtime As Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:2.1 As Runtime
 #WORKDIR /app
 #COPY --from=build /app/out .
 COPY --from=build /output /app
