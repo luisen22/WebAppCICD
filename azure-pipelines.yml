@@ -23,6 +23,12 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/WebApplicationCICD/Dockerfile'
         tags: |
           $(tag)
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+
 - stage: QA
   condition: succeeded()
   dependsOn: Build
