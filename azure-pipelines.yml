@@ -1,4 +1,11 @@
 # Docker
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'SC-LEAR'
+    appType: 'webApp'
+    WebAppName: 'AppServiceLEAR'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
