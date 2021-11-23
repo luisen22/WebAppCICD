@@ -23,6 +23,14 @@ stages:
 #        dockerfile: '$(Build.SourcesDirectory)/WebApplicationCICD/Dockerfile'
 #        tags: |
 #          $(tag)
+    - task: NuGetToolInstaller@1
+      inputs:
+        versionSpec: '4.4.1'
+    - task: NuGetCommand@2
+      inputs:
+        command: 'restore'
+        restoreSolution: '**/*.sln'
+        feedsToUse: 'select'
     - task: VSBuild@1
       inputs:
         solution: '**\*.sln'
