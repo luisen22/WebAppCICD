@@ -1,5 +1,3 @@
-# Docker
-
 trigger:
 - master
 
@@ -25,7 +23,7 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/WebApplicationCICD/Dockerfile'
         tags: |
           $(tag)
-- stage: 
+- stage: env-QA
   dependsOn:
   - start
   condition: succeeded()
