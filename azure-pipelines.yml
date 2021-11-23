@@ -63,7 +63,7 @@ stages:
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
-              azureSubscription: 'SC-LEAR'
+              azureSubscription: 'Azure for Students(7dac70d7-772e-413a-9aa3-1144e5e9aeb4)'
               appType: 'webApp'
               WebAppName: 'AppServiceLEAR'
               packageForLinux: '$(System.DefaultWorkingDirectory)/drop/*.zip'
