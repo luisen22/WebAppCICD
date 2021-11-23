@@ -23,10 +23,9 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/WebApplicationCICD/Dockerfile'
         tags: |
           $(tag)
-- stage: env-QA
-  dependsOn:
-  - start
+- stage: QA
   condition: succeeded()
+  dependsOn: Build
   jobs:
   - deployment: deploy
     environment:
