@@ -58,7 +58,7 @@ stages:
             inputs:
               buildType: 'current'
               downloadType: 'single'
-              downloadPath: '$(System.DefaultWorkingDirectory)'
+              downloadPath: '$(System.ArtifactDirectory)'
               artifactName: 'drop'
           - task: AzureRmWebAppDeployment@4
             inputs:
@@ -66,4 +66,4 @@ stages:
               azureSubscription: 'Azure for Students(7dac70d7-772e-413a-9aa3-1144e5e9aeb4)'
               appType: 'webApp'
               WebAppName: 'AppServiceLEAR'
-              packageForLinux: '$(System.DefaultWorkingDirectory)/drop/*.zip'
+              packageForLinux: '$(System.ArtifactDirectory)/drop/*.zip'
