@@ -14,7 +14,7 @@ namespace WebApplicationCICD.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "Hola mundo", "Test CI/CD Yaml Pipeline" };
+            return new string[] { "Hola mundo", "Test App Gateway MITRE" };
         }
 
         // GET api/values/5
